@@ -57,7 +57,7 @@ namespace YX
             _uvs.Add(new Vector2(0f, 1f));
             _uvs.Add(new Vector2(1f, 1f));
 
-            //通过顶点颜色的alpha识别是进度条还是文字
+            //通过顶点颜色的alpha识别是进度条还是文字，这里加了0.1，在shader中处理color.a > 0的则为进度条
             _colors.Add(Color.red + new Color(0, 0, 0, 0.1f));
             _colors.Add(Color.red + new Color(0, 0, 0, 0.1f));
             _colors.Add(Color.red + new Color(0, 0, 0, 0.1f));

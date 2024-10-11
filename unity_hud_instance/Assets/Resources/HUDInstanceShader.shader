@@ -8,9 +8,18 @@ Shader "HUD/Instance"
 
 	SubShader
 	{
-		Tags { "RenderType" = "Transparent" }
+		//Transparent队列的值为3000。这意味着Unity会先渲染所有非透明材质（队列值小于3000），然后再渲染透明材质。
+		//如果一个物体使用了设置了"IgnoreProjector"="True"的着色器，那么无论投影器的设置如何，都不会在该物体上产生投影效果。
+		//"RenderType"="Transparent"的主要作用是指定物体的渲染类型为透明
+		Tags {			
+			"Queue"="Transparent" 
+			"IgnoreProjector"="True"
+			"RenderType"="Transparent" 
+			}
 		LOD 100
 		Blend SrcAlpha OneMinusSrcAlpha
+		ZWrite Off
+		ZTest LEqual //开启深度检测
 
 		Pass
 		{
@@ -61,11 +70,13 @@ Shader "HUD/Instance"
 				fixed4 color = fixed4(0,0,0,0);
 				if (i.color.a > 1.0)
 				{
+					//进度条
 					clip(i.parm.x - i.uv.x);//通过uv计算进度，uv从0-1
 					color = i.color;
 				}
 				else
 				{
+					//字
 					float3 uv = float3(i.uv.xy, i.parm.y);
 					color = UNITY_SAMPLE_TEX2DARRAY(_FontTex, uv);
 				}

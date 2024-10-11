@@ -7804,3 +7804,13 @@ unity_hud/.vs/unity_hud/FileContentIndex/f78775ef-24f2-4620-83db-b00417bdf770.vs
 /unity_hud/.vsconfig
 /unity_hud/Assembly-CSharp.csproj
 /unity_hud/unity_hud.sln
+/unity_hud_instance/obj
+/unity_hud_instance/Library
+/unity_hud_instance/Logs
+/unity_hud_instance/UserSettings
+/unity_hud_instance/Temp
+/unity_hud_instance/.vs/unity_hud_instance/v15/.suo
+/unity_hud_instance/.vs/unity_hud_instance/v15/Server/sqlite3/db.lock
+/unity_hud_instance/.vs/unity_hud_instance/v15/Server/sqlite3/storage.ide
+/unity_hud_instance/.vs/unity_hud_instance/v15/Server/sqlite3/storage.ide-shm
+/unity_hud_instance/.vs/unity_hud_instance/v15/Server/sqlite3/storage.ide-wal

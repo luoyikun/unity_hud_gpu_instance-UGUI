@@ -38,7 +38,7 @@ namespace YX
                 _instanceMesh = _meshBuild.BuildMesh();
                 for (int i = 0; i < 500; ++i)
                 {
-                    _font2Texture.Draw("Test:" + i);
+                    _font2Texture.Draw("玩家名字:" + i);
                 }
             }
             stopwatch.Stop();

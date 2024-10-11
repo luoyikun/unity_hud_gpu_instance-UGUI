@@ -9,6 +9,7 @@ using UnityEngine.UI;
 
 namespace YX
 {
+    //需要一个摄像机照射文本
     [RequireComponent(typeof(Text))]
     public class FontRender2Texture : MonoBehaviour
     {
@@ -42,6 +43,7 @@ namespace YX
             _uiCamera.targetTexture = _renderTexture;
         }
 
+        //摄像机渲染文本到图片上
         public int Draw(string txt)
         {
             _text.text = txt;
